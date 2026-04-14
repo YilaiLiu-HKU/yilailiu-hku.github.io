@@ -1,0 +1,86 @@
+---
+permalink: /
+title: "Yilai Liu"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
+<div class="home-section">
+  <h2>About</h2>
+  <p>I am <strong>Yilai Liu</strong>, an MPhil student at <a href="https://hongyangdu.github.io/nice/"><strong>NICE Lab</strong></a>, <strong>HKU</strong>, advised by <strong>Prof. Hongyang Du</strong>. I received my B.Eng. degree from <strong>Beijing University of Posts and Telecommunications (BUPT)</strong>.</p>
+</div>
+
+<div class="home-section">
+  <h2>Research</h2>
+  <p>My research focuses on <strong>spatio-temporal representation learning</strong>, with an emphasis on contextual retrieval and consistency modeling to recover and understand complex dynamic processes from incomplete observations.</p>
+</div>
+
+<div class="home-section">
+  <h2>Education</h2>
+  <div class="education-list">
+    <div class="education-item">
+      <div class="education-icon">
+        <img src="/images/hku_icon.png" width="64" alt="The University of Hong Kong" />
+      </div>
+      <div class="education-body">
+        <div class="education-time">2025-Present</div>
+        <div class="education-school"><strong>The University of Hong Kong</strong></div>
+        <div class="education-degree">Master of Philosophy,
+        Department of Electrical and Computer Engineering</div>
+      </div>
+    </div>
+    <div class="education-item">
+      <div class="education-icon">
+        <img src="/images/bupt_icon.png" width="64" alt="Beijing University of Posts and Telecommunications" />
+      </div>
+      <div class="education-body">
+        <div class="education-time">2021-2025</div>
+        <div class="education-school"><strong>Beijing University of Posts and Telecommunications</strong></div>
+        <div class="education-degree">Bachelor of Engineering</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="home-section selected-works-section">
+  <div class="selected-works-header">
+    <h2>Selected Works</h2>
+    <a href="/research/">View all</a>
+  </div>
+  <div class="selected-works-list">
+    {% assign selected_publications = site.publications | sort: "date" | reverse %}
+    {% for post in selected_publications limit: 4 %}
+    <div class="selected-work-item">
+      <div class="selected-work-grid">
+        {% if post.header.teaser %}
+        <div class="selected-work-image">
+          <img src="/images/{{ post.header.teaser }}" alt="{{ post.title }}" />
+        </div>
+        {% endif %}
+        <div class="selected-work-body">
+      <div class="selected-work-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+      <div class="selected-work-meta">
+        <span class="selected-work-venue">{{ post.venue }}</span>
+        <span class="selected-work-year">{{ post.date | date: "%Y" }}</span>
+      </div>
+      {% if post.authors %}
+      <div class="selected-work-authors">{{ post.authors }}</div>
+      {% elsif post.citation %}
+      <div class="selected-work-authors">{{ post.citation | strip_html }}</div>
+      {% endif %}
+      {% if post.excerpt %}
+      <div class="selected-work-excerpt">{{ post.excerpt }}</div>
+      {% endif %}
+      <div class="selected-work-links">
+        {% if post.paperurl %}<a href="{{ post.paperurl }}">[Paper]</a>{% endif %}
+        {% if post.slidesurl %}<a href="{{ post.slidesurl }}">[Slides]</a>{% endif %}
+        {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">[BibTeX]</a>{% endif %}
+      </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

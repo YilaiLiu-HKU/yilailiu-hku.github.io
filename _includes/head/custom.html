@@ -1,0 +1,234 @@
+{% include base_path %}
+
+<!-- start custom head snippets -->
+
+<!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
+<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
+<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
+<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
+<link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
+<link rel="icon" href="/images/favicon.ico"/>
+<meta name="theme-color" content="#ffffff"/>
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
+<style>
+  .page__content .home-section {
+    margin: 0 0 2rem;
+    padding: 0 0 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .page__content .home-section:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .page__content .home-section h2 {
+    margin-bottom: 0.9rem;
+    padding-left: 0.75rem;
+    border-left: 4px solid #3f6db3;
+    font-size: 1.3rem;
+  }
+
+  .page__content .home-section p {
+    margin-bottom: 0;
+  }
+
+  .page__content .education-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .page__content .education-item {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.85rem 0;
+  }
+
+  .page__content .education-icon img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+  }
+
+  .page__content .education-time {
+    margin-bottom: 0.2rem;
+    color: #666;
+    font-size: 0.95rem;
+  }
+
+  .page__content .education-degree {
+    margin-top: 0.15rem;
+  }
+
+  .page__content .selected-works-section {
+    padding-bottom: 0;
+  }
+
+  .page__content .selected-works-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .page__content .selected-works-header h2 {
+    margin-bottom: 0;
+  }
+
+  .page__content .selected-works-header a {
+    white-space: nowrap;
+    font-size: 0.95rem;
+  }
+
+  .page__content .selected-works-list {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .page__content .selected-work-item {
+    padding: 1.1rem 1rem;
+    margin-bottom: 0.9rem;
+    border: 1px solid rgba(32, 44, 67, 0.08);
+    border-radius: 12px;
+    background: #fafbfd;
+  }
+
+  .page__content .selected-work-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .page__content .selected-work-grid {
+    display: grid;
+    grid-template-columns: 155px 1fr;
+    gap: 1.1rem;
+    align-items: start;
+  }
+
+  .page__content .selected-work-body {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+  }
+
+  .page__content .selected-work-image img {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(32, 44, 67, 0.08);
+    border-radius: 10px;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  .page__content .selected-work-meta {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.45rem;
+    color: #6f7782;
+    font-size: 0.72rem;
+  }
+
+  .page__content .selected-work-title {
+    margin-bottom: 0.3rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .page__content .selected-work-authors,
+  .page__content .selected-work-excerpt {
+    margin-bottom: 0.45rem;
+    color: #4f5560;
+    font-size: 0.76rem;
+    line-height: 1.48;
+  }
+
+  .page__content .selected-work-links a {
+    margin-right: 0.75rem;
+    font-size: 0.74rem;
+  }
+
+  .page__content .selected-work-links {
+    margin-top: auto;
+  }
+
+  .publication-entry {
+    display: grid;
+    grid-template-columns: 165px 1fr;
+    gap: 1.15rem;
+    align-items: start;
+    padding: 0.75rem 0;
+  }
+
+  .publication-entry__content {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+  }
+
+  .publication-entry__image img {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(32, 44, 67, 0.08);
+    border-radius: 10px;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  .archive__item-venue {
+    margin: 0 0 0.4rem;
+    color: #6f7782;
+    font-size: 0.72rem;
+  }
+
+  .archive__item-authors {
+    margin: 0 0 0.55rem;
+    color: #4f5560;
+    font-size: 0.76rem;
+  }
+
+  .archive__item-excerpt {
+    color: #5f6670;
+    font-size: 0.76rem;
+    line-height: 1.48;
+  }
+
+  .archive__item-title {
+    margin-bottom: 0.25rem;
+    font-size: 0.88rem;
+  }
+
+  .publication-entry__content > p:last-child {
+    margin-top: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .page__content .selected-work-grid,
+    .publication-entry {
+      grid-template-columns: 1fr;
+    }
+
+    .page__content .selected-work-image,
+    .publication-entry__image {
+      max-width: 260px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .page__content {
+      padding-left: 1.25rem;
+    }
+  }
+</style>
+
+
+<!-- Support for MatJax -->
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- end custom head snippets -->
