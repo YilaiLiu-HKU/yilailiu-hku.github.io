@@ -14,7 +14,7 @@ redirect_from:
 
 <div class="home-section">
   <h2>Research</h2>
-  <p>My research focuses on <strong>spatio-temporal representation learning</strong>, with an emphasis on contextual retrieval, compression and consistency modeling to recover and understand data representation from incomplete or sparse observations. In particular, I am interested in <strong>long video understanding and generation</strong> and <strong>mobile usage behavior modeling</strong>.</p>
+  <p>My research focuses on <strong>temporal representation modeling</strong>, with an emphasis on contextual retrieval, compression and consistency modeling in long video and mobile data.</p>
 </div>
 
 <div class="home-section">
@@ -48,19 +48,9 @@ redirect_from:
   <h2>Ongoing Research</h2>
   <div class="ongoing-research-list">
     <div class="ongoing-research-item">
-      <span class="ongoing-research-title">***Mem</span>
-      <span class="ongoing-research-sep"> - </span>
-      <span class="ongoing-research-desc">Character-centric memory retrieval for preserving character consistency in narrative long-video generation.</span>
-    </div>
-    <div class="ongoing-research-item">
       <span class="ongoing-research-title">***Bench</span>
       <span class="ongoing-research-sep"> - </span>
       <span class="ongoing-research-desc">Evaluating MLLMs' capability for fine-grained temporal reasoning beyond language shortcuts.</span>
-    </div>
-    <div class="ongoing-research-item">
-      <span class="ongoing-research-title">****</span>
-      <span class="ongoing-research-sep"> - </span>
-      <span class="ongoing-research-desc">Building on our MobiCom 2025 poster, we further investigate the effectiveness of our network design and data augmentation method for modeling users' mobile usage behaviors.</span>
     </div>
   </div>
 </div>
@@ -74,7 +64,7 @@ redirect_from:
     {% assign selected_publications = site.publications | sort: "date" | reverse %}
     {% for post in selected_publications limit: 4 %}
     <div class="selected-work-item">
-      <div class="selected-work-grid">
+      <div class="selected-work-grid{% unless post.header.teaser %} selected-work-grid--no-image{% endunless %}">
         {% if post.header.teaser %}
         <div class="selected-work-image">
           <img src="/images/{{ post.header.teaser }}" alt="{{ post.title }}" />
@@ -122,7 +112,7 @@ redirect_from:
       <span class="selected-work-year awards-year">2024</span>
     </div>
     <div class="ongoing-research-item awards-item">
-      <span class="ongoing-research-title">Chinese Mathematics Competitions</span>
+      <span class="ongoing-research-title">Chinese Mathematics Competitions for College Students</span>
       <span class="ongoing-research-sep"> - </span>
       <span class="ongoing-research-desc">National Second Prize</span>
       <span class="selected-work-year awards-year">2022</span>
