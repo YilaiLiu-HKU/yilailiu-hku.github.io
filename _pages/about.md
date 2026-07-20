@@ -62,7 +62,16 @@ redirect_from:
   </div>
   <div class="selected-works-list">
     {% assign selected_publications = site.publications | sort: "date" | reverse %}
-    {% for post in selected_publications limit: 4 %}
+    {% for category in site.publication_category %}
+    {% assign category_title_shown = false %}
+    {% for post in selected_publications %}
+    {% if post.category != category[0] %}
+      {% continue %}
+    {% endif %}
+    {% unless category_title_shown %}
+    <h3 class="selected-work-category">{{ category[1].title }}</h3>
+    {% assign category_title_shown = true %}
+    {% endunless %}
     <div class="selected-work-item">
       <div class="selected-work-grid{% unless post.header.teaser %} selected-work-grid--no-image{% endunless %}">
         {% if post.header.teaser %}
@@ -92,6 +101,7 @@ redirect_from:
         </div>
       </div>
     </div>
+    {% endfor %}
     {% endfor %}
   </div>
 </div>

@@ -1,7 +1,7 @@
 ---
 title: "Poster: Enhancing Mobile Traffic Data Generation through Spatio-temporal Correlation Imaging"
 collection: publications
-category: published
+category: mobile
 permalink: /publication/mobile-traffic-generation-poster
 excerpt: "Propose MIDiff, addressing the challenge of users' daily mobile usage modeling in usage sparsity by correlation imaging for data augmentation."
 venue: "MobiCom Poster"

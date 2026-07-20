@@ -79,10 +79,10 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  published:
-    title: 'Published Works'
-  submitted:
-    title: 'Submitted Works'
+  video:
+    title: 'Long Video Understanding & Generation'
+  mobile:
+    title: 'Mobile Usage Behavior Modeling'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
