@@ -3,7 +3,7 @@ title: "Poster: Enhancing Mobile Traffic Data Generation through Spatio-temporal
 collection: publications
 category: mobile
 permalink: /publication/mobile-traffic-generation-poster
-excerpt: "Propose MIDiff, addressing the challenge of users' daily mobile usage modeling in usage sparsity by correlation imaging for data augmentation."
+excerpt: "Address the challenge of users' daily mobile usage modeling under usage sparsity by correlation imaging for data augmentation."
 venue: "MobiCom Poster"
 paperurl: "https://dl.acm.org/doi/10.1145/3680207.3765692"
 authors: "Yilai Liu, Shiyuan Zhang, Hongyang Du"
