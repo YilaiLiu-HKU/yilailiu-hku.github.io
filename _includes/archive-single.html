@@ -18,8 +18,8 @@
     <div class="publication-entry">
       {% if teaser %}
       <div class="publication-entry__image">
-        {% capture teaser_src %}{% if teaser contains "://" %}{{ teaser }}{% else %}{{ teaser | prepend: "/images/" | prepend: base_path }}{% endif %}{% endcapture %}
-        <img src="{{ teaser_src | strip }}" alt="{{ title }}">
+        {% capture teaser_src %}{% if teaser contains "://" %}{{ teaser }}{% else %}{{ teaser | prepend: "/images/" }}{% endif %}{% endcapture %}
+        <img src="{{ teaser_src | strip }}" alt="{{ title | strip }}">
       </div>
       {% endif %}
       <div class="publication-entry__content">
