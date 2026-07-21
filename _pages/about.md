@@ -48,9 +48,9 @@ redirect_from:
   <h2>Ongoing Research</h2>
   <div class="ongoing-research-list">
     <div class="ongoing-research-item">
-      <span class="ongoing-research-title">***Bench</span>
+      <span class="ongoing-research-title">PreCoG</span>
       <span class="ongoing-research-sep"> - </span>
-      <span class="ongoing-research-desc">Evaluating MLLMs' capability for fine-grained temporal reasoning beyond language shortcuts.</span>
+      <span class="ongoing-research-desc">Preview-guided generation-time video correction for reducing AIGC workflow costs from long single-sample inference and high rejection rates.</span>
     </div>
   </div>
 </div>
