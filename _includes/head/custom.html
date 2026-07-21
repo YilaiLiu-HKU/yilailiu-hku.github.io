@@ -214,10 +214,16 @@
 
   .page__content .selected-work-authors,
   .page__content .selected-work-excerpt {
-    margin-bottom: 0.45rem;
+    margin: 0;
     color: #4f5560;
     font-size: 0.76rem;
     line-height: 1.48;
+  }
+
+  .page__content .selected-work-authors + .selected-work-excerpt,
+  .page__content .selected-work-excerpt + .selected-work-links,
+  .page__content .selected-work-authors + .selected-work-links {
+    margin-top: 0.45rem;
   }
 
   .page__content .selected-work-links a {
@@ -226,7 +232,7 @@
   }
 
   .page__content .selected-work-links {
-    margin-top: auto;
+    margin-top: 0;
   }
 
   .publication-entry {
