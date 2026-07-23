@@ -15,7 +15,7 @@ redirect_from:
 <div class="home-section">
   <h2>Research</h2>
   <p>My research focuses on <strong>temporal representation modeling</strong>, with an emphasis on contextual retrieval, compression and consistency modeling in long video and mobile data.</p>
-  <p class="research-contact">Feel free to contact me through <a href="mailto:2369475677@qq.com">2369475677@qq.com</a> for any potential discussion, collaboration and opportunity.</p>
+  <p class="research-contact">Feel free to contact me at <a href="mailto:2369475677@qq.com">2369475677@qq.com</a> for any potential discussion, collaboration and opportunity.</p>
 </div>
 
 <div class="home-section">
