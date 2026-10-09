@@ -85,7 +85,6 @@ redirect_from:
       {% endif %}
       <div class="selected-work-links">
         {% if post.paperurl %}<a href="{{ post.paperurl }}">[Paper]</a>{% endif %}
-        {% if post.figureurl %}<a href="{{ post.figureurl }}">[Figure]</a>{% endif %}
         {% if post.slidesurl %}<a href="{{ post.slidesurl }}">[Slides]</a>{% endif %}
         {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">[BibTeX]</a>{% endif %}
       </div>
