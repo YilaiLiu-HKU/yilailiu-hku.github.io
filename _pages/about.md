@@ -49,9 +49,15 @@ redirect_from:
   <h2>Ongoing Research</h2>
   <div class="ongoing-research-list">
     <div class="ongoing-research-item">
-      <span class="ongoing-research-title">PreCoG</span>
+      <span class="ongoing-research-title">PreCoG: Preview-Edit for Efficient Video Correction in Generation-Time</span>
       <span class="ongoing-research-sep"> - </span>
-      <span class="ongoing-research-desc">Preview-guided generation-time video correction for reducing AIGC workflow costs from long single-sample inference and high rejection rates.</span>
+      <span class="ongoing-research-desc">A training-free framework for correcting semantic failures during video generation. PreQA diagnoses unmet visual requirements from low-cost previews, while PreEdit corrects cached generation trajectories to limit changes to already correct content. Only the selected candidate receives full rendering, reducing redundant computation.</span>
+      <figure class="ongoing-research-figure">
+        <a href="/images/PreCoG-overview.pdf" aria-label="View the PreCoG framework overview as a PDF">
+          <img src="/images/PreCoG-preview.png" width="2200" height="773" loading="lazy" decoding="async" alt="PreCoG framework: PreQA plans visual requirements, evaluates low-cost previews, and refines target and counterfactual conditions; PreEdit corrects cached trajectories before the selected candidate is fully rendered." />
+        </a>
+        <figcaption>PreCoG overview: preview, diagnose, correct, and render the selected candidate. <a href="/images/PreCoG-overview.pdf">[View figure]</a></figcaption>
+      </figure>
     </div>
   </div>
 </div>
