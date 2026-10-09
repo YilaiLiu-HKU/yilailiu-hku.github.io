@@ -80,7 +80,7 @@ author:
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
   video:
-    title: 'Long Video Understanding & Generation'
+    title: 'Video Understanding & Generation'
   mobile:
     title: 'Mobile Usage Behavior Modeling'
 

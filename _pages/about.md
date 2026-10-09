@@ -45,23 +45,6 @@ redirect_from:
   </div>
 </div>
 
-<div class="home-section ongoing-research-section">
-  <h2>Ongoing Research</h2>
-  <div class="ongoing-research-list">
-    <div class="ongoing-research-item">
-      <span class="ongoing-research-title">PreCoG: Preview-Edit for Efficient Video Correction in Generation-Time</span>
-      <span class="ongoing-research-sep"> - </span>
-      <span class="ongoing-research-desc">A training-free framework for correcting semantic failures during video generation. PreQA diagnoses unmet visual requirements from low-cost previews, while PreEdit corrects cached generation trajectories to limit changes to already correct content. Only the selected candidate receives full rendering, reducing redundant computation.</span>
-      <figure class="ongoing-research-figure">
-        <a href="/images/PreCoG-overview.pdf" aria-label="View the PreCoG framework overview as a PDF">
-          <img src="/images/PreCoG-preview.png" width="2200" height="773" loading="lazy" decoding="async" alt="PreCoG framework: PreQA plans visual requirements, evaluates low-cost previews, and refines target and counterfactual conditions; PreEdit corrects cached trajectories before the selected candidate is fully rendered." />
-        </a>
-        <figcaption>PreCoG overview: preview, diagnose, correct, and render the selected candidate. <a href="/images/PreCoG-overview.pdf">[View figure]</a></figcaption>
-      </figure>
-    </div>
-  </div>
-</div>
-
 <div class="home-section selected-works-section">
   <div class="selected-works-header">
     <h2>Selected Works</h2>
@@ -82,7 +65,7 @@ redirect_from:
     <div class="selected-work-item">
       <div class="selected-work-grid{% unless post.header.teaser %} selected-work-grid--no-image{% endunless %}">
         {% if post.header.teaser %}
-        <div class="selected-work-image">
+        <div class="selected-work-image"{% if post.header.teaser_aspect_ratio %} style="aspect-ratio: {{ post.header.teaser_aspect_ratio }};"{% endif %}>
           <img src="/images/{{ post.header.teaser }}" alt="{{ post.title }}" />
         </div>
         {% endif %}
@@ -102,6 +85,7 @@ redirect_from:
       {% endif %}
       <div class="selected-work-links">
         {% if post.paperurl %}<a href="{{ post.paperurl }}">[Paper]</a>{% endif %}
+        {% if post.figureurl %}<a href="{{ post.figureurl }}">[Figure]</a>{% endif %}
         {% if post.slidesurl %}<a href="{{ post.slidesurl }}">[Slides]</a>{% endif %}
         {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">[BibTeX]</a>{% endif %}
       </div>
