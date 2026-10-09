@@ -17,7 +17,7 @@
     {% if post.collection == 'publications' %}
     <div class="publication-entry">
       {% if teaser %}
-      <div class="publication-entry__image"{% if post.header.teaser_aspect_ratio %} style="aspect-ratio: {{ post.header.teaser_aspect_ratio }};"{% endif %}>
+      <div class="publication-entry__image{% if post.header.teaser_fit == 'contain' %} publication-entry__image--contain{% endif %}">
         {% capture teaser_src %}{% if teaser contains "://" %}{{ teaser }}{% else %}{{ teaser | prepend: "/images/" }}{% endif %}{% endcapture %}
         <img src="{{ teaser_src | strip }}" alt="{{ title | strip }}">
       </div>

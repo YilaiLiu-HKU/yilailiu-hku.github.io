@@ -190,6 +190,22 @@
     object-fit: fill;
   }
 
+  .page__content .selected-work-image--contain,
+  .publication-entry__image--contain {
+    position: relative;
+    min-width: 0;
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  .page__content .selected-work-image--contain img,
+  .publication-entry__image--contain img {
+    position: absolute;
+    inset: 0;
+    padding: 0.35rem;
+    object-fit: contain;
+  }
+
   .page__content .selected-work-meta {
     display: flex;
     justify-content: flex-start;

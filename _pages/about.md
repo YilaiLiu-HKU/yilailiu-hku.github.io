@@ -65,7 +65,7 @@ redirect_from:
     <div class="selected-work-item">
       <div class="selected-work-grid{% unless post.header.teaser %} selected-work-grid--no-image{% endunless %}">
         {% if post.header.teaser %}
-        <div class="selected-work-image"{% if post.header.teaser_aspect_ratio %} style="aspect-ratio: {{ post.header.teaser_aspect_ratio }};"{% endif %}>
+        <div class="selected-work-image{% if post.header.teaser_fit == 'contain' %} selected-work-image--contain{% endif %}">
           <img src="/images/{{ post.header.teaser }}" alt="{{ post.title }}" />
         </div>
         {% endif %}
