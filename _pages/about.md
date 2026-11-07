@@ -14,8 +14,8 @@ redirect_from:
     <p class="profile-intro__role">MPhil · HKU ECE</p>
     <p class="profile-intro__location"><i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> Hong Kong, China · <a href="{{ site.author.employer_uri }}">{{ site.author.employer }}</a></p>
     <div class="profile-intro__bio">
-      <p>I am <strong>Yilai Liu</strong>, currently pursuing a <strong>Master of Philosophy</strong> degree at <strong>the University of Hong Kong (HKU)</strong>. I conduct my research at <a href="https://hongyangdu.github.io/nice/"><strong>NICE Lab</strong></a> under the supervision of <strong>Prof. Hongyang Du</strong>. Before that, I received my B.Eng. degree from <strong>Beijing University of Posts and Telecommunications (BUPT)</strong>.</p>
-      <p>My earlier research focused on temporal representation modeling for mobile data. I now work on improving the <strong>efficiency and consistency</strong> of <strong>long-video generation and agentic video generation</strong>.</p>
+      <p>I am <strong>Yilai Liu</strong>, currently pursuing a Master of Philosophy degree at the University of Hong Kong (HKU). I conduct my research at <a href="https://hongyangdu.github.io/nice/">NICE Lab</a> under the supervision of <strong>Prof. Hongyang Du</strong>. Before that, I received my B.Eng. degree from Beijing University of Posts and Telecommunications (BUPT).</p>
+      <p>My earlier research focused on temporal representation modeling for mobile data. I now work on improving the efficiency and consistency of long-video generation and agentic video generation.</p>
       <p class="research-contact">Feel free to contact me at <a href="mailto:2369475677@qq.com">2369475677@qq.com</a> for any potential discussion, collaboration and opportunity.</p>
     </div>
   </div>
