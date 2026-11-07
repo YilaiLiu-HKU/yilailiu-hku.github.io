@@ -6,12 +6,21 @@
   {% assign research_tags = research_tags | concat: post_tags %}
 {% endfor %}
 {% assign research_tags = research_tags | uniq | sort %}
+{% assign preferred_tags = "Video Generation|Video Understanding|Mobile Data|Temporal Consistency|Efficient AI" | split: "|" %}
+{% assign ordered_tags = empty_tags %}
+{% for tag in preferred_tags %}
+  {% if research_tags contains tag %}
+    {% assign one_tag = tag | split: "|" %}
+    {% assign ordered_tags = ordered_tags | concat: one_tag %}
+  {% endif %}
+{% endfor %}
+{% assign research_tags = ordered_tags | concat: research_tags | uniq %}
 
 <div class="research-browser" data-research-browser>
   <div class="research-filters" role="group" aria-label="Filter research by topic" hidden>
     <button type="button" class="research-filter is-active" data-research-tag="" aria-pressed="true" aria-controls="research-publications">All</button>
     {% for tag in research_tags %}
-    <button type="button" class="research-filter" data-research-tag="{{ tag | escape }}" aria-pressed="false" aria-controls="research-publications">{{ tag | escape }}</button>
+    <button type="button" class="research-filter research-tag--{{ tag | slugify }}" data-research-tag="{{ tag | escape }}" aria-pressed="false" aria-controls="research-publications">{{ tag | escape }}</button>
     {% endfor %}
   </div>
   <p class="sr-only" data-research-status role="status" aria-live="polite" aria-atomic="true"></p>
@@ -34,15 +43,15 @@
             {% endfor %}
           </div>
           {% endif %}
-          <div class="selected-work-meta">
-            <span class="selected-work-venue">{{ post.venue }}</span>
-            <span class="selected-work-year">{{ post.date | date: "%Y" }}</span>
-          </div>
           {% if post.authors %}
           <div class="selected-work-authors">{{ post.authors | replace: 'Yilai Liu', '<strong><u>Yilai Liu</u></strong>' }}</div>
           {% elsif post.citation %}
           <div class="selected-work-authors">{{ post.citation | strip_html }}</div>
           {% endif %}
+          <div class="selected-work-meta">
+            <span class="selected-work-venue">{{ post.venue }}</span>
+            <span class="selected-work-year">{{ post.date | date: "%Y" }}</span>
+          </div>
           {% if post.excerpt %}
           <div class="selected-work-excerpt">{{ post.excerpt }}</div>
           {% endif %}
