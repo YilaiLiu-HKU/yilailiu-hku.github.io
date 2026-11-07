@@ -1,0 +1,60 @@
+{% assign selected_publications = site.publications | sort: "date" | reverse %}
+{% assign empty_tags = "" | split: "," %}
+{% assign research_tags = empty_tags %}
+{% for post in selected_publications %}
+  {% assign post_tags = post.research_tags | default: empty_tags %}
+  {% assign research_tags = research_tags | concat: post_tags %}
+{% endfor %}
+{% assign research_tags = research_tags | uniq | sort %}
+
+<div class="research-browser" data-research-browser>
+  <div class="research-filters" role="group" aria-label="Filter research by topic" hidden>
+    <button type="button" class="research-filter is-active" data-research-tag="" aria-pressed="true" aria-controls="research-publications">All</button>
+    {% for tag in research_tags %}
+    <button type="button" class="research-filter" data-research-tag="{{ tag | escape }}" aria-pressed="false" aria-controls="research-publications">{{ tag | escape }}</button>
+    {% endfor %}
+  </div>
+  <p class="sr-only" data-research-status role="status" aria-live="polite" aria-atomic="true"></p>
+  <div class="selected-works-list" id="research-publications">
+    {% for post in selected_publications %}
+    {% assign post_tags = post.research_tags | default: empty_tags %}
+    <div class="selected-work-item" data-research-item data-research-tags="{{ post_tags | jsonify | escape }}">
+      <div class="selected-work-grid{% unless post.header.teaser %} selected-work-grid--no-image{% endunless %}">
+        {% if post.header.teaser %}
+        <div class="selected-work-image{% if post.header.teaser_fit == 'contain' %} selected-work-image--contain{% endif %}">
+          <img src="{{ post.header.teaser | prepend: '/images/' | relative_url }}" alt="{{ post.title | escape }}" />
+        </div>
+        {% endif %}
+        <div class="selected-work-body">
+          <h3 class="selected-work-title">{{ post.title }}</h3>
+          {% if post_tags.size > 0 %}
+          <div class="research-tags" aria-label="Research topics">
+            {% for tag in post_tags %}
+            <span class="research-tag research-tag--{{ tag | slugify }}">{{ tag | escape }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <div class="selected-work-meta">
+            <span class="selected-work-venue">{{ post.venue }}</span>
+            <span class="selected-work-year">{{ post.date | date: "%Y" }}</span>
+          </div>
+          {% if post.authors %}
+          <div class="selected-work-authors">{{ post.authors | replace: 'Yilai Liu', '<strong><u>Yilai Liu</u></strong>' }}</div>
+          {% elsif post.citation %}
+          <div class="selected-work-authors">{{ post.citation | strip_html }}</div>
+          {% endif %}
+          {% if post.excerpt %}
+          <div class="selected-work-excerpt">{{ post.excerpt }}</div>
+          {% endif %}
+          <div class="selected-work-links">
+            {% if post.paperurl %}<a href="{{ post.paperurl }}">[Paper]</a>{% endif %}
+            {% if post.slidesurl %}<a href="{{ post.slidesurl }}">[Slides]</a>{% endif %}
+            {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">[BibTeX]</a>{% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<script src="{{ '/assets/js/research-filter.js' | relative_url }}" defer></script>

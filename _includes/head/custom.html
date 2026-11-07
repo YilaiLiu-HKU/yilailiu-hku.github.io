@@ -517,6 +517,65 @@
     .home-layout .page__content .awards-item { flex-wrap: wrap; column-gap: 0.35rem; }
     .home-layout .page__content .awards-year { margin-left: 0; padding-left: 0; }
   }
+  .research-browser [hidden] { display: none !important; }
+
+  .research-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 0.65rem;
+  }
+
+  .research-filter {
+    margin: 0;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--global-border-color);
+    border-radius: 6px;
+    color: var(--global-text-color);
+    background: transparent;
+    font: inherit;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    cursor: pointer;
+  }
+
+  .research-filter:hover { border-color: var(--global-link-color); }
+  .research-filter.is-active {
+    border-color: #365a78;
+    color: #fff;
+    background: #365a78;
+  }
+  .research-filter:focus-visible {
+    outline: 2px solid var(--global-link-color);
+    outline-offset: 3px;
+  }
+
+  .research-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.15rem 0 0.55rem; }
+  .research-tag {
+    display: inline-block;
+    padding: 0.1rem 0.45rem;
+    border-radius: 4px;
+    background: #eef2f6;
+    color: #365a78;
+    font-size: 0.65rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .research-tag--video-understanding { background: #eaf3ef; color: #32654e; }
+  .research-tag--mobile-data { background: #f7f0e5; color: #805b27; }
+  .research-tag--efficient-ai { background: #eeedf7; color: #5b5084; }
+  .research-tag--consistency { background: #f5edf2; color: #80536b; }
+
+  .home-layout .page__content h3.selected-work-title { margin-top: 0; }
+  .home-layout .page__content .selected-work-item.is-last-visible { padding-bottom: 0; border-bottom: 0; }
+
+  html[data-theme="dark"] .research-filter.is-active { background: #365a78; border-color: #7ba4c7; }
+  html[data-theme="dark"] .research-tag { background: #293e50; color: #c4d9ec; }
+  html[data-theme="dark"] .research-tag--video-understanding { background: #294438; color: #b8dfcb; }
+  html[data-theme="dark"] .research-tag--mobile-data { background: #4a3b27; color: #ead3ac; }
+  html[data-theme="dark"] .research-tag--efficient-ai { background: #3c3551; color: #d7cbed; }
+  html[data-theme="dark"] .research-tag--consistency { background: #4c3341; color: #edc6dc; }
+
 </style>
 
 

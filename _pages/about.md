@@ -60,53 +60,11 @@ redirect_from:
 
 <div class="home-section selected-works-section">
   <div class="selected-works-header">
-    <h2>Selected Works</h2>
+    <h2>Research</h2>
     <a href="/research/">View all</a>
   </div>
-  <div class="selected-works-list">
-    {% assign selected_publications = site.publications | sort: "date" | reverse %}
-    {% for category in site.publication_category %}
-    {% assign category_title_shown = false %}
-    {% for post in selected_publications %}
-    {% if post.category != category[0] %}
-      {% continue %}
-    {% endif %}
-    {% unless category_title_shown %}
-    <h3 class="selected-work-category">{{ category[1].title }}</h3>
-    {% assign category_title_shown = true %}
-    {% endunless %}
-    <div class="selected-work-item">
-      <div class="selected-work-grid{% unless post.header.teaser %} selected-work-grid--no-image{% endunless %}">
-        {% if post.header.teaser %}
-        <div class="selected-work-image{% if post.header.teaser_fit == 'contain' %} selected-work-image--contain{% endif %}">
-          <img src="/images/{{ post.header.teaser }}" alt="{{ post.title }}" />
-        </div>
-        {% endif %}
-        <div class="selected-work-body">
-      <div class="selected-work-title">{{ post.title }}</div>
-      <div class="selected-work-meta">
-        <span class="selected-work-venue">{{ post.venue }}</span>
-        <span class="selected-work-year">{{ post.date | date: "%Y" }}</span>
-      </div>
-      {% if post.authors %}
-      <div class="selected-work-authors">{{ post.authors | replace: 'Yilai Liu', '<strong><u>Yilai Liu</u></strong>' }}</div>
-      {% elsif post.citation %}
-      <div class="selected-work-authors">{{ post.citation | strip_html }}</div>
-      {% endif %}
-      {% if post.excerpt %}
-      <div class="selected-work-excerpt">{{ post.excerpt }}</div>
-      {% endif %}
-      <div class="selected-work-links">
-        {% if post.paperurl %}<a href="{{ post.paperurl }}">[Paper]</a>{% endif %}
-        {% if post.slidesurl %}<a href="{{ post.slidesurl }}">[Slides]</a>{% endif %}
-        {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">[BibTeX]</a>{% endif %}
-      </div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-    {% endfor %}
-  </div>
+  {% include research-list.html %}
+
 </div>
 
 <div class="home-section">

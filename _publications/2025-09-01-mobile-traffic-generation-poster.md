@@ -2,6 +2,7 @@
 title: "Poster: Enhancing Mobile Traffic Data Generation through Spatio-temporal Correlation Imaging"
 collection: publications
 category: mobile
+research_tags: ["Mobile Data"]
 permalink: /publication/mobile-traffic-generation-poster
 excerpt: "Address the challenge of users' daily mobile usage modeling under usage sparsity by correlation imaging for data augmentation."
 venue: "MobiCom Poster"
