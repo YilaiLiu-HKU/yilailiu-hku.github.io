@@ -27,7 +27,7 @@
   .page__content .home-section h2 {
     margin-bottom: 0.9rem;
     padding-left: 0.75rem;
-    border-left: 4px solid #3f6db3;
+    border-left: 4px solid var(--global-link-color);
     font-size: 1.3rem;
   }
 
@@ -61,7 +61,7 @@
 
   .page__content .education-time {
     margin-bottom: 0.2rem;
-    color: #666;
+    color: var(--profile-muted);
     font-size: 0.95rem;
   }
 
@@ -79,18 +79,18 @@
   }
 
   .page__content .ongoing-research-item {
-    color: #4f5560;
+    color: var(--profile-muted);
     font-size: 0.84rem;
     line-height: 1.6;
   }
 
   .page__content .ongoing-research-title {
     font-weight: 600;
-    color: #222;
+    color: var(--global-text-color);
   }
 
   .page__content .ongoing-research-sep {
-    color: #7b8290;
+    color: var(--profile-muted);
   }
 
   .page__content .awards-item {
@@ -107,7 +107,7 @@
     margin-left: auto;
     padding-left: 1rem;
     white-space: nowrap;
-    color: #6f7782;
+    color: var(--profile-muted);
   }
 
   .page__content .selected-works-header {
@@ -133,7 +133,7 @@
 
   .page__content .selected-work-category {
     margin: 1.15rem 0 0.65rem;
-    color: #22314d;
+    color: var(--global-text-color);
     font-size: 0.95rem;
     font-weight: 700;
   }
@@ -141,9 +141,9 @@
   .page__content .selected-work-item {
     padding: 0.75rem 0.85rem 0.55rem;
     margin-bottom: 0.75rem;
-    border: 1px solid rgba(32, 44, 67, 0.08);
-    border-radius: 12px;
-    background: #fafbfd;
+    border: 1px solid var(--global-border-color);
+    border-radius: 4px;
+    background: var(--global-bg-color);
   }
 
   .page__content .selected-work-item:last-child {
@@ -183,10 +183,10 @@
     height: 100% !important;
     max-width: 100%;
     max-height: none !important;
-    border: 1px solid rgba(32, 44, 67, 0.08);
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(32, 44, 67, 0.08);
+    border: 1px solid var(--global-border-color);
+    border-radius: 4px;
+    background: var(--global-bg-color);
+    box-shadow: none;
     object-fit: fill;
   }
 
@@ -194,8 +194,8 @@
   .publication-entry__image--contain {
     position: relative;
     min-width: 0;
-    background: #fff;
-    border-radius: 10px;
+    background: var(--global-bg-color);
+    border-radius: 4px;
   }
 
   .page__content .selected-work-image--contain img,
@@ -211,7 +211,7 @@
     justify-content: flex-start;
     gap: 1rem;
     margin-bottom: 0.32rem;
-    color: #6f7782;
+    color: var(--profile-muted);
     font-size: 0.72rem;
   }
 
@@ -235,7 +235,7 @@
   .page__content .selected-work-authors,
   .page__content .selected-work-excerpt {
     margin: 0;
-    color: #4f5560;
+    color: var(--profile-muted);
     font-size: 0.76rem;
     line-height: 1.42;
   }
@@ -278,9 +278,9 @@
 
   .publication-archive__item {
     padding: 1.1rem 1rem;
-    border: 1px solid rgba(32, 44, 67, 0.08);
-    border-radius: 12px;
-    background: #fafbfd;
+    border: 1px solid var(--global-border-color);
+    border-radius: 4px;
+    background: var(--global-bg-color);
   }
 
   .page__content .archive__subtitle {
@@ -289,23 +289,23 @@
     padding-bottom: 0.45rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     font-size: 1.2rem;
-    color: #222;
+    color: var(--global-text-color);
   }
 
   .archive__item-venue {
     margin: 0 0 0.4rem;
-    color: #6f7782;
+    color: var(--profile-muted);
     font-size: 0.72rem;
   }
 
   .archive__item-authors {
     margin: 0 0 0.55rem;
-    color: #4f5560;
+    color: var(--profile-muted);
     font-size: 0.76rem;
   }
 
   .archive__item-excerpt {
-    color: #5f6670;
+    color: var(--profile-muted);
     font-size: 0.76rem;
     line-height: 1.48;
     margin: 0 0 0.45rem;
@@ -347,10 +347,159 @@
     }
   }
 
-  @media screen and (min-width: 1024px) {
-    .page__content {
-      padding-left: 1.25rem;
+
+  /* Homepage: integrated biography and contacts, followed by full-width sections. */
+  :root { --profile-muted: #646b73; }
+  html[data-theme="dark"] { --profile-muted: #c0c6cd; }
+
+  #main.home-layout {
+    max-width: 1120px;
+    margin: 2.5rem auto 0;
+    padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+  }
+
+  .home-layout > .page {
+    display: flow-root;
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .home-layout .page__content { padding-left: 0; }
+
+  .home-layout .page__content .home-section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .home-layout .page__content .home-section + .home-section {
+    margin-top: 2rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--global-border-color);
+  }
+
+  .home-layout .page__content .home-section h2 {
+    margin: 0 0 1.1rem;
+    padding: 0;
+    border: 0;
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .home-layout .page__content .profile-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 200px;
+    column-gap: 3rem;
+    align-items: start;
+  }
+
+  .profile-intro__body { min-width: 0; }
+
+  .home-layout .profile-intro h1 {
+    margin: 0 0 0.45rem;
+    font-size: 2rem;
+    font-weight: 650;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .home-layout .profile-intro__role {
+    color: var(--profile-muted);
+    font-size: 0.95rem;
+  }
+
+  .home-layout .profile-intro__location {
+    margin-top: 0.5rem;
+    color: var(--profile-muted);
+    font-size: 0.78rem;
+  }
+
+  .profile-intro__bio { margin-top: 1.25rem; }
+  .profile-intro__bio p { line-height: 1.65; }
+
+  .profile-intro__portrait img {
+    display: block;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid var(--global-border-color);
+    border-radius: 4px;
+  }
+
+  .home-layout .profile-intro__contacts {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.35rem;
+    margin: 1.5rem 0 0;
+    padding: 1.15rem 0 0;
+    list-style: none;
+    border-top: 1px solid var(--global-border-color);
+  }
+
+  .home-layout .profile-intro__contacts li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .profile-intro__contacts a { text-decoration: none; }
+  .profile-intro__contacts a:hover { text-decoration: underline; }
+
+  .home-layout .page__content .education-list { gap: 1.25rem; }
+  .home-layout .page__content .education-item { padding: 0; }
+  .home-layout .page__content .selected-works-header { margin-bottom: 1.25rem; }
+  .home-layout .page__content .selected-works-header h2 { margin-bottom: 0; }
+  .home-layout .page__content .selected-works-list { border: 0; }
+  .home-layout .page__content .selected-work-category { margin: 1.75rem 0 0.25rem; }
+  .home-layout .page__content .selected-work-category:first-child { margin-top: 0; }
+
+  .home-layout .page__content .selected-work-item {
+    margin: 0;
+    padding: 1.25rem 0;
+    border: 0;
+    border-bottom: 1px solid var(--global-border-color);
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .home-layout .page__content .selected-work-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .home-layout .page__content .selected-work-grid {
+    grid-template-columns: 285px minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .home-layout .page__content .selected-work-grid--no-image { grid-template-columns: minmax(0, 1fr); }
+  .home-layout .page__content .selected-work-links { margin-top: 0.5rem; }
+
+  @media screen and (max-width: 768px) {
+    #main.home-layout { margin-top: 1.75rem; }
+    .home-layout .page__content .profile-intro {
+      grid-template-columns: minmax(0, 1fr) 140px;
+      column-gap: 1.5rem;
     }
+    .profile-intro__portrait img { width: 140px; height: 175px; }
+    .home-layout .page__content .selected-work-grid { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
+    .home-layout .page__content .selected-work-image { max-width: 360px; }
+    .home-layout .page__content .selected-work-image img { max-width: 100%; }
+  }
+
+  @media screen and (max-width: 600px) {
+    .home-layout .page__content .profile-intro { grid-template-columns: minmax(0, 1fr); }
+    .profile-intro__portrait { grid-row: 1; margin-bottom: 1.25rem; }
+    .profile-intro__portrait img { width: 112px; height: 140px; }
+    .home-layout .profile-intro h1 { font-size: 1.8rem; }
+    .home-layout .profile-intro__contacts { gap: 0.65rem 1.2rem; }
+    .home-layout .page__content .home-section + .home-section { margin-top: 1.75rem; padding-top: 1.5rem; }
+    .home-layout .page__content .awards-item { flex-wrap: wrap; column-gap: 0.35rem; }
+    .home-layout .page__content .awards-year { margin-left: 0; padding-left: 0; }
   }
 </style>
 

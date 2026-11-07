@@ -1,15 +1,32 @@
 ---
 permalink: /
 title: "Yilai Liu"
-author_profile: true
+author_profile: false
+show_title: false
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-<div class="home-section">
-  <h2>About</h2>
-  <p>I am <strong>Yilai Liu</strong>, currently pursuing a <strong>Master of Philosophy</strong> degree at <strong>the University of Hong Kong (HKU)</strong>. I conduct my research at <a href="https://hongyangdu.github.io/nice/"><strong>NICE Lab</strong></a> under the supervision of <strong>Prof. Hongyang Du</strong>. Before that, I received my B.Eng. degree from <strong>Beijing University of Posts and Telecommunications (BUPT)</strong>.</p>
+<div class="home-section profile-intro">
+  <div class="profile-intro__body">
+    <h1>Yilai Liu</h1>
+    <p class="profile-intro__role">MPhil · HKU ECE</p>
+    <p class="profile-intro__location"><i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> Hong Kong, China · <a href="{{ site.author.employer_uri }}">{{ site.author.employer }}</a></p>
+    <div class="profile-intro__bio">
+      <p>I am <strong>Yilai Liu</strong>, currently pursuing a <strong>Master of Philosophy</strong> degree at <strong>the University of Hong Kong (HKU)</strong>. I conduct my research at <a href="https://hongyangdu.github.io/nice/"><strong>NICE Lab</strong></a> under the supervision of <strong>Prof. Hongyang Du</strong>. Before that, I received my B.Eng. degree from <strong>Beijing University of Posts and Telecommunications (BUPT)</strong>.</p>
+    </div>
+  </div>
+  <div class="profile-intro__portrait">
+    <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="{{ site.author.name }}" width="200" height="250" />
+  </div>
+  <ul class="profile-intro__contacts" aria-label="Contact and academic profiles">
+    <li><a href="mailto:{{ site.author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> {{ site.author.email }}</a></li>
+    <li><span><i class="fab fa-fw fa-weixin" aria-hidden="true"></i> WeChat: {{ site.author.wechat | escape }}</span></li>
+    <li><a href="{{ site.author.googlescholar }}"><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+    <li><a href="{{ site.author.orcid }}"><i class="ai ai-orcid ai-fw" aria-hidden="true"></i> ORCID</a></li>
+    <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+  </ul>
 </div>
 
 <div class="home-section">
