@@ -15,6 +15,8 @@ redirect_from:
     <p class="profile-intro__location"><i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> Hong Kong, China · <a href="{{ site.author.employer_uri }}">{{ site.author.employer }}</a></p>
     <div class="profile-intro__bio">
       <p>I am <strong>Yilai Liu</strong>, currently pursuing a <strong>Master of Philosophy</strong> degree at <strong>the University of Hong Kong (HKU)</strong>. I conduct my research at <a href="https://hongyangdu.github.io/nice/"><strong>NICE Lab</strong></a> under the supervision of <strong>Prof. Hongyang Du</strong>. Before that, I received my B.Eng. degree from <strong>Beijing University of Posts and Telecommunications (BUPT)</strong>.</p>
+      <p>My research focuses on <strong>temporal representation modeling</strong>, with an emphasis on contextual retrieval, compression and consistency modeling in long video and mobile data.</p>
+      <p class="research-contact">Feel free to contact me at <a href="mailto:2369475677@qq.com">2369475677@qq.com</a> for any potential discussion, collaboration and opportunity.</p>
     </div>
   </div>
   <div class="profile-intro__portrait">
@@ -27,12 +29,6 @@ redirect_from:
     <li><a href="{{ site.author.orcid }}"><i class="ai ai-orcid ai-fw" aria-hidden="true"></i> ORCID</a></li>
     <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
   </ul>
-</div>
-
-<div class="home-section">
-  <h2>Research</h2>
-  <p>My research focuses on <strong>temporal representation modeling</strong>, with an emphasis on contextual retrieval, compression and consistency modeling in long video and mobile data.</p>
-  <p class="research-contact">Feel free to contact me at <a href="mailto:2369475677@qq.com">2369475677@qq.com</a> for any potential discussion, collaboration and opportunity.</p>
 </div>
 
 <div class="home-section">
