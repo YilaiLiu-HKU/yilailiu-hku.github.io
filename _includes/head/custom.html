@@ -352,6 +352,18 @@
   :root { --profile-muted: #646b73; }
   html[data-theme="dark"] { --profile-muted: #c0c6cd; }
 
+  body.home-page {
+    --profile-surface: #fff;
+    --profile-card-border: #e3e7ec;
+    background-color: #f3f5f7;
+  }
+
+  html[data-theme="dark"] body.home-page {
+    --profile-surface: #30353c;
+    --profile-card-border: #454c55;
+    background-color: #25292f;
+  }
+
   #main.home-layout {
     max-width: 1120px;
     margin: 2.5rem auto 0;
@@ -370,14 +382,15 @@
 
   .home-layout .page__content .home-section {
     margin: 0;
-    padding: 0;
-    border: 0;
+    padding: 2rem;
+    border: 1px solid var(--profile-card-border);
+    border-radius: 12px;
+    background: var(--profile-surface);
+    box-shadow: 0 2px 8px rgba(25, 36, 50, 0.035);
   }
 
   .home-layout .page__content .home-section + .home-section {
-    margin-top: 2rem;
-    padding-top: 1.75rem;
-    border-top: 1px solid var(--global-border-color);
+    margin-top: 1.25rem;
   }
 
   .home-layout .page__content .home-section h2 {
@@ -497,7 +510,9 @@
     .profile-intro__portrait img { width: 112px; height: 140px; }
     .home-layout .profile-intro h1 { font-size: 1.8rem; }
     .home-layout .profile-intro__contacts { gap: 0.65rem 1.2rem; }
-    .home-layout .page__content .home-section + .home-section { margin-top: 1.75rem; padding-top: 1.5rem; }
+    #main.home-layout { padding-right: 1rem; padding-left: 1rem; }
+    .home-layout .page__content .home-section { padding: 1.25rem; border-radius: 10px; }
+    .home-layout .page__content .home-section + .home-section { margin-top: 1rem; }
     .home-layout .page__content .awards-item { flex-wrap: wrap; column-gap: 0.35rem; }
     .home-layout .page__content .awards-year { margin-left: 0; padding-left: 0; }
   }
