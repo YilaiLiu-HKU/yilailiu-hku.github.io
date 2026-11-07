@@ -544,6 +544,8 @@
     cursor: pointer;
   }
 
+  .research-filter[data-research-tag=""] { --topic-bg: #f0f1f3; --topic-fg: #515761; }
+
   .research-filter:hover { border-color: var(--topic-fg); }
   .research-filter.is-active {
     border-color: var(--topic-fg);
@@ -579,6 +581,7 @@
   html[data-theme="dark"] .research-tag--mobile-data { --topic-bg: #4a3b27; --topic-fg: #ead3ac; }
   html[data-theme="dark"] .research-tag--temporal-consistency { --topic-bg: #4c3341; --topic-fg: #edc6dc; }
   html[data-theme="dark"] .research-tag--efficient-ai { --topic-bg: #3c3551; --topic-fg: #d7cbed; }
+  html[data-theme="dark"] .research-filter[data-research-tag=""] { --topic-bg: #3b4047; --topic-fg: #d6dae0; }
   html[data-theme="dark"] .research-filter.is-active { color: #25292f; }
 
 </style>
