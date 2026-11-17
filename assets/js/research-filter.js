@@ -13,7 +13,7 @@
       return JSON.parse(item.dataset.researchTags);
     });
     var selectedTag = "";
-    var firstAuthorOnly = false;
+    var firstAuthorOnly = Boolean(authorFilter);
 
     function applyFilters() {
       var visible = [];
