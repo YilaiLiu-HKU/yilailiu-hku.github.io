@@ -50,6 +50,7 @@
         applyFilters();
       });
       authorFilter.hidden = false;
+      authorFilter.disabled = false;
     }
     applyFilters();
     filters.hidden = false;
