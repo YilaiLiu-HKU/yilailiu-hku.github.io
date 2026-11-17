@@ -1,8 +1,9 @@
 ---
 title: "TempCloze: Can Video-LLMs Identify the Missing Middle?"
 collection: publications
+first_author: true
 category: video
-research_tags: ["Video Understanding", "Temporal Consistency"]
+research_tags: ["Video Understanding", "Memory & Consistency"]
 permalink: /publication/tempcloze
 excerpt: "Introduce TempCloze, a video cloze benchmark for evaluating visual temporal reasoning beyond language shortcuts by identifying the missing middle from beginning and ending clips."
 venue: "EMNLP Finding"

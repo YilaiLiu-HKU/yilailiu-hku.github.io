@@ -1,6 +1,7 @@
 ---
 title: "Poster: Enhancing Mobile Traffic Data Generation through Spatio-temporal Correlation Imaging"
 collection: publications
+first_author: true
 category: mobile
 research_tags: ["Mobile Data"]
 permalink: /publication/mobile-traffic-generation-poster

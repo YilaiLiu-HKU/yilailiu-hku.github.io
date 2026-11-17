@@ -6,7 +6,7 @@
   {% assign research_tags = research_tags | concat: post_tags %}
 {% endfor %}
 {% assign research_tags = research_tags | uniq | sort %}
-{% assign preferred_tags = "Video Generation|Video Understanding|Mobile Data|Temporal Consistency|Efficient AI" | split: "|" %}
+{% assign preferred_tags = "Video Generation|Video Understanding|Mobile Data|Memory & Consistency|Efficient AI" | split: "|" %}
 {% assign ordered_tags = empty_tags %}
 {% for tag in preferred_tags %}
   {% if research_tags contains tag %}
@@ -23,11 +23,12 @@
     <button type="button" class="research-filter research-tag--{{ tag | slugify }}" data-research-tag="{{ tag | escape }}" aria-pressed="false" aria-controls="research-publications">{{ tag | escape }}</button>
     {% endfor %}
   </div>
+  <p class="research-empty" data-research-empty hidden>No publications match these filters.</p>
   <p class="sr-only" data-research-status role="status" aria-live="polite" aria-atomic="true"></p>
   <div class="selected-works-list" id="research-publications">
     {% for post in selected_publications %}
     {% assign post_tags = post.research_tags | default: empty_tags %}
-    <div class="selected-work-item" data-research-item data-research-tags="{{ post_tags | jsonify | escape }}">
+    <div class="selected-work-item" data-research-item data-first-author="{{ post.first_author | default: false }}" data-research-tags="{{ post_tags | jsonify | escape }}">
       <div class="selected-work-grid{% unless post.header.teaser %} selected-work-grid--no-image{% endunless %}">
         {% if post.header.teaser %}
         <div class="selected-work-image{% if post.header.teaser_fit == 'contain' %} selected-work-image--contain{% endif %}">

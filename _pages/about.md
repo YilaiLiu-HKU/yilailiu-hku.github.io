@@ -61,7 +61,10 @@ redirect_from:
 <div class="home-section selected-works-section">
   <div class="selected-works-header">
     <h2>Research</h2>
-    <a href="/research/">View all</a>
+    <button type="button" class="research-author-filter" data-research-author-filter aria-pressed="false" aria-controls="research-publications" hidden>
+      <span class="research-author-filter__switch" aria-hidden="true"></span>
+      First / Co-first author only
+    </button>
   </div>
   {% include research-list.html %}
 
